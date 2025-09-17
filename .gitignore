@@ -1,0 +1,9 @@
+# Ignore uploaded videos
+static/videos/*
+!static/videos/.gitkeep
+
+# DB 
+site.db
+
+# env
+env/
