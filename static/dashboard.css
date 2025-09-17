@@ -192,8 +192,7 @@ body {
     padding: 15px;
   }
   .videos_container {
-    display: grid;
-    grid-template-columns: repeat(1, minmax(850px, 1fr));
+    grid-template-columns: 1fr;
     gap: 10px;
   }
   .video_card video {
@@ -204,9 +203,7 @@ body {
 }
 @media (min-width: 641px) and (max-width: 768px) {
   .videos_container {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(550px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
   }
   .video_card video {
     width: 100%;
