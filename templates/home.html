@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoVault</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+
+</head>
+<body>
+    <header class="Page">
+        <div class="welcom">
+            <h1> Welcome to VideoVault </h1>
+            <p>Store, manage, and access your personal videos securely in one place.</p>
+            <a href="{{ url_for('login') }}" class="btn"> Start Uploading</a>
+        </div>
+    </header>
+
+    <section class="about">
+        <h2> What is VideoVault?</h2>
+        <p> VideoVault is the simple platform where you can safely upload and store your
+            videos. Whether it is project presentations, family memories, or tutorials, 
+            we keep them organized and accessible anywhere.
+        </p>
+
+    </section>
+
+    <section class="us_contain">
+        <h3> Why choose VideoVault?</h3>
+        <div class="box_containers">
+            <div class="containers">
+               <h4> Secure Storage </h4>
+               <p> Your videos are kept safe and private.</p>
+            </div>
+            <div class="containers">
+                <h5> Access Anywhere </h5>
+                <p> Watch and download your videos from any device. </p>
+            </div>
+            <div class="containers">
+                <h6> Easy Upload </h6>
+                <p> Upload videos in just a few clicks with no setup required.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>@ 2025 VideoVault. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

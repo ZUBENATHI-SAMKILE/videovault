@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ current_user.username }}'s Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="dashboard_container">
+
+  
+    <aside class="sidebar">
+      <div class="profile">
+        <h2>Welcome {{ current_user.username }} <i style="font-size:24px" class="fa">&#xf2c0;</i></h2>
+        <p>You have stored: <strong>{{ videos|length }}</strong> videos</p>
+      </div>
+
+      <nav class="sidebar_nav">
+        <a href="{{ url_for('dashboard') }}"> Dashboard</a>
+        <a href="#upload"> Upload</a>
+        <a href="{{ url_for('logout') }}" class="logout_link"> Logout</a>
+      </nav>
+    </aside>
+
+    <main class="main_content">
+
+  
+      <section id="upload" class="upload_section">
+        <h2> Upload a New Video</h2>
+        <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data" class="upload_form">
+          <input type="text" name="title" placeholder="Video Title" required>
+          <input type="file" name="video" accept="video/*" required>
+          <button type="submit">Upload</button>
+        </form>
+      </section>
+
+  
+      <section class="videos_section">
+        <h2> Your Uploaded Videos</h2>
+
+        {% if videos %}
+          <div class="videos_container">
+            {% for video in videos %}
+              <div class="video_card">
+                <video controls>
+                  <source src="{{ url_for('static', filename='videos/' + video.filename) }}" type="video/mp4">
+                </video>
+                <p><strong>{{ video.title }}</strong></p>
+
+                
+                <small>Uploaded on: {{ video.upload_date.strftime("%Y-%m-%d") }}</small>
+
+                <div class="actions">
+                
+                  <a href="{{ url_for('download', video_id=video.id) }}"> Download <i style="font-size:24px" class="fa">&#xf01a;</i></a>
+
+                
+                  <form action="{{ url_for('delete', video_id=video.id) }}" method="post" style="display:inline;">
+                    <button type="submit" class="delete_btn"> Delete <i style="font-size:24px" class="fa">&#xf00d;</i></button>
+                  </form>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        {% else %}
+          <p class="empty_msg">You haven’t uploaded any videos yet.</p>
+        {% endif %}
+      </section>
+    </main>
+  </div>
+</body>
+</html>
