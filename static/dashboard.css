@@ -170,18 +170,16 @@ body {
   text-align: center;
   font-style: italic;
 }
-
 @media (max-width: 640px) {
   .dashboard_container {
     flex-direction: column;
   }
   .sidebar {
     width: 100%;
-    height: auto;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 10px; 
+    padding: 10px;
   }
   .profile {
     margin-bottom: 0;
@@ -193,17 +191,24 @@ body {
   .main_content {
     padding: 15px;
   }
-  .video_card video {
+  .videos-container {
+    grid-template-columns: 1fr; 
+    gap: 10px;
+  }
+  .video-card video {
     width: 100%;
     height: auto;
     border-radius: 8px;
   }
-  .videos_container {
-    grid-template-columns: 1fr;
-    gap: 10px;
+}
+@media (min-width: 641px) and (max-width: 768px) {
+  .videos-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .video-card video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
   }
 }
-
-
-
-
