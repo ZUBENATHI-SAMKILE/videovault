@@ -23,9 +23,9 @@ and accessible anytime, anywhere.
 
   
 ##Security Notes
--Passwords are hashed using Werkzeug before storing.
--Videos are restricted to logged-in users.
--For production, consider using cloud storage (AWS S3, GCP) instead of local storage.
+- Passwords are hashed using Werkzeug before storing.
+- Videos are restricted to logged-in users.
+- For production, consider using cloud storage (AWS S3, GCP) instead of local storage.
 
 ##Future Improvements
 -User profile customization
