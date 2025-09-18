@@ -28,9 +28,9 @@ and accessible anytime, anywhere.
 - For production, consider using cloud storage (AWS S3, GCP) instead of local storage.
 
 ##Future Improvements
--User profile customization
--Video categorization & search
--Cloud storage integration
+- User profile customization
+- Video categorization & search
+- Cloud storage integration
 
 ##License
 -This project is licensed under the MIT License
