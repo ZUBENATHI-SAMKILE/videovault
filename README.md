@@ -12,13 +12,16 @@ and accessible anytime, anywhere.
 - Manage Content – Delete videos you no longer need.
 - Timestamps – Each video shows its upload date.
 - Responsive Dashboard – Works smoothly on desktop and mobile.
--
-## Tech Stack
--Backend: Flask (Python)
--Database: SQLite (with Flask-Migrate for migrations)
--Frontend: HTML, CSS, Jinja2 Templates
--Auth: Flask-Login (session management, password hashing)
 
+
+## Tech Stack
+- Backend: Flask (Python)
+- Database: SQLite (with Flask-Migrate for migrations)
+- Frontend: HTML, CSS, Jinja2 Templates
+- Auth: Flask-Login (session management, password hashing)
+- Used Render to deploy
+
+  
 ##Security Notes
 -Passwords are hashed using Werkzeug before storing.
 -Videos are restricted to logged-in users.
