@@ -9,7 +9,7 @@ from flask_migrate import Migrate
 import os
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = "name-secrete"
+app.config['SECRET_KEY'] = "name"
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 app.config['UPLOAD_FOLDER'] = os.path.join('static', 'videos')
 
