@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
@@ -17,7 +16,6 @@ header.Page {
   text-align: center;
   padding: 80px 20px;
 }
-
 header.Page h1 {
   font-size: 2.5rem;
   margin-bottom: 15px;
