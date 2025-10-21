@@ -1,8 +1,8 @@
 
-🎥 VideoVault
+# 🎥 VideoVault
 
-VideoVault is a secure and simple platform to upload, store, and manage your personal videos.
-Whether it’s project presentations, tutorials, or family memories, VideoVault keeps them safe 
+- VideoVault is a secure and simple platform to upload, store, and manage your personal videos.
+- Whether it’s project presentations, tutorials, or family memories, VideoVault keeps them safe 
 and accessible anytime, anywhere.
 
 Live Demo click for Live Demo URL: https://www-videovault-zs.onrender.com
@@ -21,7 +21,7 @@ Live Demo click for Live Demo URL: https://www-videovault-zs.onrender.com
 - Database: SQLite (with Flask-Migrate for migrations)
 - Frontend: HTML, CSS, Jinja2 Templates
 - Auth: Flask-Login (session management, password hashing)
-- Used Render to deploy
+-  Used Render to deploy
 
   
 ##Security Notes
